@@ -40,6 +40,7 @@ namespace PersmisosApi
             services.AddScoped<IPermisoRepository, PermisoRepository>();
             services.AddScoped<ITipoPermisoRepository, TipoPermisoRepository>();
             services.AddScoped<IPermisosBo, PermisosBo>();
+            services.AddScoped<ITipoPermisosBo, TipoPermisosBo>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 

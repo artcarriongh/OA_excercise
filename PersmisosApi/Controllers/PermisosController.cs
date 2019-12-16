@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Permisos.DAL;
@@ -13,12 +14,15 @@ namespace PersmisosApi.Controllers
     {
         private readonly IPermisosBo Service;
 
+        private readonly ITipoPermisosBo ValidacionService;
+
         private readonly ILogger<PermisosController> Logger;
 
-        public PermisosController(ILogger<PermisosController> logger, IPermisosBo service)
+        public PermisosController(ILogger<PermisosController> logger, IPermisosBo service, ITipoPermisosBo validacionService)
         {
             Logger = logger;
             Service = service;
+            ValidacionService = validacionService;
         }
 
         [HttpGet]
@@ -42,6 +46,11 @@ namespace PersmisosApi.Controllers
             try
             {
                 dto.fechaPermiso = DateTime.Now;
+                if (!ValidacionService.GetAll().Any(t => t.id == int.Parse(dto.tipoPermisoId)))
+                {
+                    return BadRequest("El Tipo de Permiso no es válido.");
+                }
+
                 Service.Add(dto);
                 Logger.LogInformation("Permiso crado.");
                 return Ok($"Persmiso para {dto.apellidosEmpleado}, {dto.nombreEmpleado} fue creado con éxito.");
