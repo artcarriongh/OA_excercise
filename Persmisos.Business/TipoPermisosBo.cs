@@ -12,9 +12,12 @@ namespace Persmisos.Business
     public class TipoPermisosBo : ITipoPermisosBo
     {
         private readonly ITipoPermisoService TipoPermisoService;
+        public TipoPermisosBo(ITipoPermisoService tipoPermisoService)
+        {
+            TipoPermisoService = tipoPermisoService;
+        }
         public TipoPermisoDto Get(int id)
         {
-
             return TipoPermisoMapping.MapTipoPermisoEntity(TipoPermisoService.Get(x => x.Id == id));
         }
 
