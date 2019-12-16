@@ -18,6 +18,7 @@ namespace Permisos.Test
         }
 
         [Test]
+        [Obsolete]
         public void AddPermisoTest()
         {
             var connString = "Data Source=LAP0378\\SQLEXPRESS;Initial Catalog=Permisos;Integrated Security=True";
@@ -34,9 +35,10 @@ namespace Permisos.Test
                 FechaPermiso= DateTime.Now
             });
             
-            Assert.AreEqual(repo.GetAll().ToList().Count, 1);
+            Assert.AreEqual(repo.GetAll().ToList().Count, 5);
         }
         [Test]
+        [Obsolete]
         public void DeletePermisoTest()
         {
             var connString = "Data Source=LAP0378\\SQLEXPRESS;Initial Catalog=Permisos;Integrated Security=True";
@@ -51,8 +53,10 @@ namespace Permisos.Test
                 service.Delete(permiso.Id.Value);
             }
 
-            Assert.AreEqual(repo.GetAll().ToList().Count, 0);
+            Assert.AreEqual(repo.GetAll().ToList().Count, 4);
         }
+
+        
 
     }
 }

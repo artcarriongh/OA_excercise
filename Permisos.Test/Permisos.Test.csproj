@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+    <PackageReference Include="Moq" Version="4.13.1" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
@@ -17,6 +18,8 @@
     <ProjectReference Include="..\Permisos.DAL\Permisos.DAL.csproj" />
     <ProjectReference Include="..\Permisos.Domain\Permisos.Domain.csproj" />
     <ProjectReference Include="..\Permisos.Service\Permisos.Service.csproj" />
+    <ProjectReference Include="..\Persmisos.Business\Persmisos.Business.csproj" />
+    <ProjectReference Include="..\PersmisosApi\PersmisosApi.csproj" />
   </ItemGroup>
 
 </Project>
