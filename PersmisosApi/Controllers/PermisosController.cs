@@ -53,7 +53,7 @@ namespace PersmisosApi.Controllers
 
                 Service.Add(dto);
                 Logger.LogInformation("Permiso crado.");
-                return Ok($"Persmiso para {dto.apellidosEmpleado}, {dto.nombreEmpleado} fue creado con éxito.");
+                return Ok(dto);
             }
             catch (Exception ex)
             {
@@ -69,7 +69,7 @@ namespace PersmisosApi.Controllers
             {
                 Service.Delete(id);
                 Logger.LogInformation($"El permiso para el Id: {id} ha sido eliminado.");
-                return Ok($"El permiso para el Id: {id} fue eliminado con éxito.");
+                return Ok(id);
             }
             catch (Exception ex)
             {
