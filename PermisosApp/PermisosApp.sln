@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersmisosApi", "..\PersmisosApi\PersmisosApi.csproj", "{9EB986D0-0F77-4205-B6CE-C1E119A5A9CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permisos.DAL", "..\Permisos.DAL\Permisos.DAL.csproj", "{061CC624-F731-471D-AE8E-BADCC426A6E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permisos.Service", "..\Permisos.Service\Permisos.Service.csproj", "{CE56D116-DF24-470D-A86B-7DD293F6E653}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permisos.Domain", "..\Permisos.Domain\Permisos.Domain.csproj", "{6AB0430B-6462-4958-B840-1E27EA49860D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permisos.Test", "..\Permisos.Test\Permisos.Test.csproj", "{0973FA45-27E6-4243-94E7-2ED1838DB98F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persmisos.Business", "..\Persmisos.Business\Persmisos.Business.csproj", "{8881BE3D-E503-4687-AB26-886CD3D0EC9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermisosApp", "PermisosApp.csproj", "{1A77782C-90C6-4E8B-ACD0-ABBA59CC754D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EB986D0-0F77-4205-B6CE-C1E119A5A9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB986D0-0F77-4205-B6CE-C1E119A5A9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB986D0-0F77-4205-B6CE-C1E119A5A9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB986D0-0F77-4205-B6CE-C1E119A5A9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061CC624-F731-471D-AE8E-BADCC426A6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061CC624-F731-471D-AE8E-BADCC426A6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061CC624-F731-471D-AE8E-BADCC426A6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061CC624-F731-471D-AE8E-BADCC426A6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE56D116-DF24-470D-A86B-7DD293F6E653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE56D116-DF24-470D-A86B-7DD293F6E653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE56D116-DF24-470D-A86B-7DD293F6E653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE56D116-DF24-470D-A86B-7DD293F6E653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB0430B-6462-4958-B840-1E27EA49860D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB0430B-6462-4958-B840-1E27EA49860D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB0430B-6462-4958-B840-1E27EA49860D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB0430B-6462-4958-B840-1E27EA49860D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0973FA45-27E6-4243-94E7-2ED1838DB98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0973FA45-27E6-4243-94E7-2ED1838DB98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0973FA45-27E6-4243-94E7-2ED1838DB98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0973FA45-27E6-4243-94E7-2ED1838DB98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8881BE3D-E503-4687-AB26-886CD3D0EC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8881BE3D-E503-4687-AB26-886CD3D0EC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8881BE3D-E503-4687-AB26-886CD3D0EC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8881BE3D-E503-4687-AB26-886CD3D0EC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A77782C-90C6-4E8B-ACD0-ABBA59CC754D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A77782C-90C6-4E8B-ACD0-ABBA59CC754D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A77782C-90C6-4E8B-ACD0-ABBA59CC754D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A77782C-90C6-4E8B-ACD0-ABBA59CC754D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40E43DB6-1859-4C6D-911C-9E6F63AA9EBA}
+	EndGlobalSection
+EndGlobal
