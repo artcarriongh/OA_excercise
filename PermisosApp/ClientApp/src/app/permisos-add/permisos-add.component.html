@@ -1,0 +1,35 @@
+<h1>Agregar un nuevo permiso</h1>
+<div class="alert alert-danger" *ngIf="error">{{errorMessage}}</div>
+<form [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Apellidos</label>
+    <div class="col-md-5">
+      <input class="form-control" type="text" formControlName="apellidosEmpleado">
+    </div>
+    <span class="text-danger ml-3" *ngIf="apellidosEmpleado?.invalid && formDir.submitted">
+      Apellidos son requeridos.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12">Nombre</label>
+    <div class="col-md-5">
+      <input class="form-control" type="text" formControlName="nombreEmpleado">
+    </div>
+    <span class="text-danger ml-3" *ngIf="nombreEmpleado?.invalid && formDir.submitted">
+      Nombre es requerido.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-1">Tipo de Permiso</label>
+    <div class="col-md-1">
+      <input class="form-control" type="text" formControlName="tipoPermisoId">
+    </div>
+    <span class="text-danger ml-3" *ngIf="tipoPermisoId?.invalid && formDir.submitted">
+      Tipo de Permiso es requerido.
+    </span>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success float-right">Enviar</button>
+    <button class="btn btn-secondary float-left" (click)="cancel()">Cancelar</button>
+  </div>
+</form>

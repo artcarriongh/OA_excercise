@@ -1,0 +1,29 @@
+<h1>Permisos actuales</h1>
+
+<p *ngIf="!(permisosList$ | async)"><em>Cargando...</em></p>
+<p>
+  <a [routerLink]="['/add']" class="btn btn-primary float-right mb-3">Nuevo permiso</a>
+</p>
+
+<table class="table table-sm table-hover" *ngIf="(permisosList$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Apellidos</th>
+      <th>Nombres</th>
+      <th>Fecha</th>
+      <th>Tipo de Permiso</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let permiso of (permisosList$ | async)">
+      <td>{{ permiso.id }}</td>
+      <td>{{ permiso.apellidosEmpleado }}</td>
+      <td>{{ permiso.nombreEmpleado }}</td>
+      <td>{{ permiso.fechaPermiso | date: "dd.MM.y" }}</td>
+      <td>{{ permiso.tipoPermiso}}</td>
+      <td><a [routerLink]="" (click)="delete(permiso.id)" class="btn btn-danger btn-sm float-right">Eliminar</a></td>
+    </tr>
+  </tbody>
+</table>
